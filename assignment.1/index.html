@@ -12,6 +12,21 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // Your ItemList component code will go here
+
+    function Gallery({children}){
+      return<div className="gallery-grid">{children}</div>
+    }
+    
+    function Image({src}){
+      return <img src={src} alt="Image" />;
+    
+    }
+ 
+
+ReactDOM.render(   <Gallery>
+  <Image src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+  <Image src="https://images.pexels.com/photos/409128/pexels-photo-409128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+</Gallery>,document.getElementById("root"))
   </script>
 </body>
 </html>
